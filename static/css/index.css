@@ -1,13 +1,16 @@
 
 /*index*/
 body {
-	display: flex;
+
+    display: flex;
 	justify-content: space-around;
 	align-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	min-height: 100vh;
+
 	background-image: linear-gradient(#111, #050505);
+
+
 	/*--img-url: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=350&h=350&fit=crop&crop=faces);*/
 }
 
@@ -60,18 +63,17 @@ body {
     outline: none;
     align-items: center;
     justify-content: center;
-
     padding: 1px;
 }
 
 .button:active{
     border-radius: 20%;
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
 }
 
 .drop-container{
-    height: 15%;
+    height: 20%;
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
@@ -89,7 +91,9 @@ body {
     box-shadow:
     -1px -1px 15px rgba(255,255,255,0.5),
     10px 10px 15px rgba(255,255,255,.1);
-    background-color: rgba(200,200,200,1);
+    background-color: rgba(17,52,82,.1);
+    font-size: 50%;
+    color: rgba(255,255,255,1);
 }
 
 .diametrInput{
@@ -103,8 +107,9 @@ body {
     box-shadow:
     -1px -1px 15px rgba(255,255,255,0.5),
     10px 10px 15px rgba(255,255,255,.1);
-    background-color: rgba(200,200,200,1);
     text-align: center;
+    background-color: rgba(17,52,82,.1);
+    color: rgba(255,255,255,1);
 
 }
 
@@ -144,7 +149,7 @@ body {
 .calk-buttonC:active, .calk-buttonS:active{
     border-radius: 20%;
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
 }
 
 
@@ -160,7 +165,8 @@ body {
     box-shadow:
     -1px -1px 15px rgba(255,255,255,0.5),
     10px 10px 15px rgba(255,255,255,.1);
-    background-color: rgba(200,200,200,1);
+    background-color: rgba(17,52,82,.1);
+    color: rgba(255,255,255,1);
     text-align: center;
 }
 
@@ -177,7 +183,8 @@ body {
     box-shadow:
     -1px -1px 15px rgba(255,255,255,0.5),
     10px 10px 15px rgba(255,255,255,.1);
-    background-color: rgba(200,200,200,1);
+    background-color: rgba(17,52,82,.1);
+    color: rgba(255,255,255,1);
     text-align: center;
 }
 
@@ -190,13 +197,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
+
 }
 
 .result-button{
     height: 100%;
-    width: 75vh;
-    margin: 1px 5px;
-    flex: 1 0 20%;
+    width: 40%;
+    margin: auto 1%;
+    margin-right: 2%;
+    flex: 1 0 18%;
     -webkit-appearance: none;
     box-shadow:
     -1px -1px 15px rgba(255,255,255,0.5),
@@ -208,24 +217,41 @@ body {
     outline: none;
     align-items: center;
     justify-content: center;
-
+    font-size: 90%;
     padding: 1px;
 }
 
 .result-button:active{
     border-radius: 20%;
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
 }
 
 
 .result-label{
-    color: rgba(255,255,255,1)
+    margin: auto 1%;
+    height: 40%;
+    width: 2%;
+    flex: 1 0 16%;
+    -webkit-appearance: none;
+    box-shadow:
+    -1px -1px 15px rgba(255,255,255,0.5),
+    10px 10px 15px rgba(255,255,255,.1);
+    border-radius: 15%;
+    border: 2px solid rgba(17,52,82,1);
+    color: rgba(255,255,255,1);
+    background: rgba(17,52,82,.5);
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 90%;
+    padding: 1px;
+    text-align: center;
 }
 
 
-save-container{
-    height: 25%;
+.save-container{
+    height: 10%;
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
@@ -233,27 +259,26 @@ save-container{
 
 .save-button{
     height: 100%;
-    width: 50%;
-    margin: 1px 5px;
-    flex: 1 0 20%;
+    width: 80%;
+    margin: auto;
+
     -webkit-appearance: none;
     box-shadow:
     -1px -1px 15px rgba(255,255,255,0.5),
     10px 10px 15px rgba(255,255,255,.1);
-    border-radius: 15%;
+    border-radius: 10%;
     border: 2px solid rgba(17,52,82,1);
     color: rgba(255,255,255,1);
     background: rgba(17,52,82,.5);
     outline: none;
     align-items: center;
     justify-content: center;
-
     padding: 1px;
 }
 
 .save-button:active{
     border-radius: 20%;
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
 }
 
