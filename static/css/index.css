@@ -50,8 +50,8 @@ body {
 .button{
     height: 100%;
     width: 75vh;
-    margin: 1px 5px;
     flex: 1 0 20%;
+    margin: 1px 5px;
     -webkit-appearance: none;
     box-shadow:
     -1px -1px 15px rgba(255,255,255,0.5),
@@ -63,7 +63,13 @@ body {
     outline: none;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 95%;
+    display: flex;
     padding: 1px;
+
+
 }
 
 .button:active{
@@ -92,7 +98,7 @@ body {
     -1px -1px 15px rgba(255,255,255,0.5),
     10px 10px 15px rgba(255,255,255,.1);
     background-color: rgba(17,52,82,.1);
-    font-size: 50%;
+    font-size: 90%;
     color: rgba(255,255,255,1);
 }
 
