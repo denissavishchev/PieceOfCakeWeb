@@ -42,16 +42,16 @@ body {
 
 .button-container{
     height: 10%;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     padding: 5%;
 }
 
 .button{
     height: 100%;
-    width: 75vh;
-    flex: 1 0 20%;
-    margin: 1px 5px;
+    width: 20%;
+
+    margin: 1% auto;
     -webkit-appearance: none;
     box-shadow:
     -1px -1px 15px rgba(255,255,255,0.5),
@@ -65,8 +65,8 @@ body {
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    font-size: 95%;
-    display: flex;
+
+    display: inline-flex;
     padding: 1px;
 
 

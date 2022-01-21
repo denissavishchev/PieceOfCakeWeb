@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Piece of Cake
+{% endblock %}
+
+{% block body %}
+<div class="basic">
+
+    <div class="frame frame-1">
+
+        <p class="label-text" >Create Ingredient</p>
+
+        <div class="input-container">
+            <input class="create-input" placeholder="Name">
+            <input class="create-input" placeholder="Price">
+            <input class="create-input" placeholder="Qty">
+            <textarea class="create-input comment" cols="6" rows="5" placeholder="Comment"></textarea>
+        </div>
+        <div class="create-ing-button-container">
+            <a class="cleanButton" href="#">Clean</a>
+            <a class="createButton" href="#">Create</a>
+            <a class="Xbutton" href="/">X</a>
+        </div>
+    <div/>
+</div>
+
+{% endblock %}
