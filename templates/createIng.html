@@ -12,14 +12,17 @@ Piece of Cake
         <p class="label-text" >Create Ingredient</p>
 
         <div class="input-container">
-            <input class="create-input" placeholder="Name">
-            <input class="create-input" placeholder="Price">
-            <input class="create-input" placeholder="Qty">
-            <textarea class="create-input comment" cols="6" rows="5" placeholder="Comment"></textarea>
+            <form method="post">
+            <input class="create-input" placeholder="Name" name="name" id="name">
+            <input type="number" min="0" class="create-input" placeholder="Price" name="price" id="price">
+            <input type="number" min="0" class="create-input" placeholder="Qty" name="qty" id="qty">
+            <textarea class="create-input comment" cols="6" rows="5" placeholder="Comment" name="comment" id="comment"></textarea>
+            <input type="submit" class="createButton" value="Create">
+            </form>
         </div>
         <div class="create-ing-button-container">
             <a class="cleanButton" href="#">Clean</a>
-            <a class="createButton" href="#">Create</a>
+
             <a class="Xbutton" href="/">X</a>
         </div>
     <div/>
