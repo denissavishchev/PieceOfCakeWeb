@@ -8,13 +8,23 @@ Piece of Cake
 <div class="basic">
 
     <div class="frame frame-1">
+          <p class="label-text" >List of Ingredients</p>
+
+                    {% for ing in ingredients %}
+                    <div class="ing-container">
+                    <label class="ing-label" id="comment"><a href="/ingList/{{ ing.id }}" >
+                        <i class='fas fa-comment-dots' style='font-size:20px;color:white'></i></a>
+                        {{ ing.name }} Price: {{ ing.price }} Qty: {{ ing.qty }}
+                        <a class="edit-button" href="#">Edit</a>
+                        <a class="del-button" href="#" onclick="return confirm('Sure?')" >Delete</a>
+                    </label>
+                    </div>
+                    {% endfor %}
+                    <a class="ingXbutton" href="/">X</a>
 
 
-            <p class="label-text" >List of Ingredients</p>
+    </div>
 
-            <a class="Xbutton" href="/">X</a>
-
-    <div/>
 </div>
 
 {% endblock %}

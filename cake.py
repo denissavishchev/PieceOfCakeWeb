@@ -25,11 +25,6 @@ def index():
     return render_template('index.html')
 
 
-@cake.route('/ingList')
-def ingList():
-    return render_template('ingList.html')
-
-
 @cake.route('/createIng', methods=['POST', 'GET'])
 def createIng():
     if request.method == 'POST':
@@ -44,12 +39,27 @@ def createIng():
             db.session.add(ingredients)
             db.session.commit()
             return redirect('/createIng')
-
         except:
             return 'Error'
     else:
         return render_template('createIng.html')
 
+
+@cake.route('/ingList')
+def ingList():
+    ingredients = Ingredients.query.order_by(Ingredients.name).all()
+    return render_template('ingList.html', ingredients=ingredients)
+
+
+@cake.route('/ingList/<int:id>')
+def ingListComment(id):
+    ingComment = Ingredients.query.get(id)
+    return render_template('ingComment.html', ingComment=ingComment)
+
+
+@cake.route('/<name>')
+def user(name):
+    return 'Hello, ' + name
 
 if __name__ == '__main__':
     cake.run(debug=True)
