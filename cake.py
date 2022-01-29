@@ -53,8 +53,42 @@ def ingList():
 
 @cake.route('/ingList/<int:id>')
 def ingListComment(id):
-    ingComment = Ingredients.query.get(id)
+    ingComment = Ingredients.query.get(id) #get from db by id
     return render_template('ingComment.html', ingComment=ingComment)
+
+
+@cake.route('/ingList/<int:id>/delete')
+def ingListDelete(id):
+    ingDelete = Ingredients.query.get_or_404(id)#get from bd by id if exists
+
+    try:
+        db.session.delete(ingDelete)
+        db.session.commit()
+        return redirect('/ingList')
+    except:
+        return 'Error'
+
+
+@cake.route('/ingList/<int:id>/edit', methods=['POST', 'GET'])
+def ingListEdit(id):
+    ingredients = Ingredients.query.get(id)
+    if request.method == 'POST':
+        ingredients.name = request.form['name'] # update in db
+        ingredients.price = request.form['price']
+        ingredients.qty = request.form['qty']
+        ingredients.comment = request.form['comment']
+
+        # ingredients = Ingredients(name=name, price=price, qty=qty, comment=comment) - 76-79
+
+        try:
+            # db.session.add(ingredients) - 76-79
+            db.session.commit()
+            return redirect('/ingList')
+        except:
+            return 'Error'
+    else:
+
+        return render_template('ingListEdit.html', ingredients=ingredients)
 
 
 @cake.route('/<name>')

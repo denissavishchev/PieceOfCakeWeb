@@ -70,7 +70,7 @@
     padding: 1px;
 }
 
-.ingXbutton{
+.ingXbutton, .ingCreatebutton{
 
     margin-top: 60%;
     margin-left: 80%;
@@ -94,7 +94,7 @@
     padding: 1px;
 }
 
-.ingXbutton:active, .edit-button:active, .del-button:active{
+.ingXbutton:active, .edit-button:active, .del-button:active, .ingCreatebutton:active{
     border-radius: 20%;
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 1);

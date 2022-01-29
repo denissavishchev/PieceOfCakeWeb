@@ -233,7 +233,7 @@ input[type=number] {
     outline: none;
     align-items: center;
     justify-content: center;
-    font-size: 90%;
+    font-size: 190%;
     padding: 1px;
 }
 
@@ -253,14 +253,14 @@ input[type=number] {
     box-shadow:
     -1px -1px 15px rgba(255,255,255,0.5),
     10px 10px 15px rgba(255,255,255,.1);
-    border-radius: 15%;
+    border-radius: 10%;
     border: 2px solid rgba(17,52,82,1);
     color: rgba(255,255,255,1);
     background: rgba(17,52,82,.5);
     outline: none;
     align-items: center;
     justify-content: center;
-    font-size: 90%;
+    font-size: 190%;
     padding: 1px;
     text-align: center;
 }
@@ -290,6 +290,7 @@ input[type=number] {
     align-items: center;
     justify-content: center;
     padding: 1px;
+    font-size: 190%;
 }
 
 .save-button:active{

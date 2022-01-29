@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+EditIngredient
+{% endblock %}
+
+{% block body %}
+<div class="basic">
+
+    <div class="frame frame-1">
+
+        <p class="label-text" >Edit Ingredient</p>
+
+        <div class="input-container">
+            <form method="post">
+            <input class="create-input" placeholder="Name" name="name" id="name" minlength="1" value="{{ ingredients.name }}">
+            <input type="number" min="0" class="create-input" placeholder="Price" name="price" id="price" value="{{ ingredients.price }}">
+            <input type="number" min="0" class="create-input" placeholder="Qty" name="qty" id="qty" value="{{ ingredients.qty }}">
+            <textarea class="create-input comment" cols="6" rows="5" placeholder="Comment" name="comment" id="comment" >{{ ingredients.comment }}</textarea>
+            <input type="submit" class="createButton" value="Edit">
+            </form>
+        </div>
+        <div class="create-ing-button-container">
+            <a class="cleanButton" href="#">Clean</a>
+
+            <a class="Xbutton" href="/ingList">X</a>
+        </div>
+    <div/>
+</div>
+
+{% endblock %}
