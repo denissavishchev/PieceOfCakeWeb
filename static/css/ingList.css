@@ -100,3 +100,63 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
 }
 
+.show-comment{
+    height: 5%;
+    width: 100%;
+    margin: 3% auto;
+    text-shadow:
+    10px -10px 7px rgba(17,52,82,0.6),
+    -10px 10px 7px rgba(17,52,82,0.6),
+    -10px -10px 7px rgba(255,255,255,0.6),
+    10px 10px 7px rgba(255,255,255,0.6);
+    display: flex;
+    color: rgba(255,255,255,1);
+    justify-content: center;
+    text-align: center;
+    font-size: 100%;
+}
+
+.commentXbutton{
+    margin: 90% auto;
+
+    height: 5%;
+    width: 10%;
+    box-shadow:
+    -1px -1px 15px rgba(255,255,255,0.5),
+    10px 10px 15px rgba(255,255,255,.1);
+    border-radius: 15%;
+    border: 2px solid rgba(17,52,82,1);
+    color: rgba(255,255,255,1);
+    background: rgba(17,52,82,.5);
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 150%;
+    display: flex;
+    padding: 1px;
+}
+
+.commentXbutton:active{
+    border-radius: 20%;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+
+.frame-comment {
+	flex-shrink: 0;
+	margin: 50px auto;
+	height: calc(300px + 6vw);
+	width: calc(260px + 6vw);
+	border: calc(8px + 0.2vw) solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	background-size: cover;
+	background-color: rgba(17,52,82,.8);
+	box-sizing: border-box;
+	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.frame-1-comment {
+	border-radius: 5%;

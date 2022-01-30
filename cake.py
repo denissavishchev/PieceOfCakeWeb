@@ -2,11 +2,11 @@ from flask import Flask, render_template, url_for, request, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
-
 cake = Flask(__name__)
 cake.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ingredients.db'
 cake.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(cake)
+
 
 class Ingredients(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -53,13 +53,13 @@ def ingList():
 
 @cake.route('/ingList/<int:id>')
 def ingListComment(id):
-    ingComment = Ingredients.query.get(id) #get from db by id
+    ingComment = Ingredients.query.get(id)  # get from db by id
     return render_template('ingComment.html', ingComment=ingComment)
 
 
 @cake.route('/ingList/<int:id>/delete')
 def ingListDelete(id):
-    ingDelete = Ingredients.query.get_or_404(id)#get from bd by id if exists
+    ingDelete = Ingredients.query.get_or_404(id)  # get from bd by id if exists
 
     try:
         db.session.delete(ingDelete)
@@ -73,7 +73,7 @@ def ingListDelete(id):
 def ingListEdit(id):
     ingredients = Ingredients.query.get(id)
     if request.method == 'POST':
-        ingredients.name = request.form['name'] # update in db
+        ingredients.name = request.form['name']  # update in db
         ingredients.price = request.form['price']
         ingredients.qty = request.form['qty']
         ingredients.comment = request.form['comment']
@@ -94,6 +94,7 @@ def ingListEdit(id):
 @cake.route('/<name>')
 def user(name):
     return 'Hello, ' + name
+
 
 if __name__ == '__main__':
     cake.run(debug=True)
