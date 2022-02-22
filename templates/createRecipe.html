@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+Piece of Cake
+{% endblock %}
+
+{% block body %}
+<div class="basic">
+
+    <div class="frame frame-1">
+
+        <p class="label-text" >Create Recipe</p>
+
+        <div class="input-container">
+            <form method="post">
+                <div class="addIng">
+                    <input class="recipeName-input" placeholder="Recipe Name" name="recipeName" id="recipeName" minlength="1">
+                    <button type="button" class="add-to-btn" data-toggle="modal" data-target="#exampleModal">+</button>
+                </div>
+                <div class="createRecipeList">
+                {% if ingredients|length > 0 %}
+                    {% for ing in ingredients %}
+                    <div class="create-container">
+                    <label class="ing-label" id="comment"><a href="/ingList/{{ ing.id }}">
+                        <i class='fas fa-comment-dots' style='font-size:20px;color:white'></i></a>
+                        {{ ing.name }} Price: {{ ing.price }} Qty: {{ ing.qty }}
+                        <a class="edit-button" href="/ingList/{{ ing.id }}/edit">Edit</a>
+                        <a class="del-button" href="/ingList/{{ ing.id }}/delete" >Delete</a>
+                    </label>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="label-text" >is Empty</p>
+                {% endif %}
+                    </div>
+
+            <input type="number" min="0" class="recipeD-input" placeholder="D" name="D" id="D">
+            <input type="number" min="0" class="recipeD-input" placeholder="W" name="W" id="W">
+            <textarea class="create-input comment" cols="6" rows="5" placeholder="Comment" name="Ccomment" id="Ccomment"></textarea>
+            <input type="submit" class="createButton" value="Create">
+            </form>
+        </div>
+
+        <div class="create-ing-button-container">
+            <a class="cleanButton" href="#">Clean</a>
+            {% for message in get_flashed_messages() %}
+            {{ message }}
+            {% endfor %}
+            <a class="Xbutton" href="/">X</a>
+        </div>
+    <div/>
+</div>
+
+
+
+
+{% endblock %}
+

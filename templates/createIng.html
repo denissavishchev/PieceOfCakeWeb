@@ -21,9 +21,12 @@ Piece of Cake
             <input type="submit" class="createButton" value="Create">
             </form>
         </div>
+
         <div class="create-ing-button-container">
             <a class="cleanButton" href="#">Clean</a>
-
+            {% for message in get_flashed_messages() %}
+            {{ message }}
+            {% endfor %}
             <a class="Xbutton" href="/">X</a>
         </div>
     <div/>

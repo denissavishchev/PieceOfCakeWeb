@@ -6,7 +6,7 @@ cake = Flask(__name__)
 cake.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ingredients.db'
 cake.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(cake)
-
+cake.secret_key = 'the random string'
 
 class Ingredients(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -36,9 +36,12 @@ def createIng():
         ingredients = Ingredients(name=name, price=price, qty=qty, comment=comment)
 
         try:
+            flash('Hello')
             db.session.add(ingredients)
             db.session.commit()
+
             return redirect('/createIng')
+
         except:
             return 'Error'
     else:
@@ -89,6 +92,12 @@ def ingListEdit(id):
     else:
 
         return render_template('ingListEdit.html', ingredients=ingredients)
+
+
+@cake.route('/createRecipe')
+def createRecipe():
+    ingredients = Ingredients.query.order_by(Ingredients.name).all()
+    return render_template('createRecipe.html', ingredients=ingredients)
 
 
 @cake.route('/<name>')
